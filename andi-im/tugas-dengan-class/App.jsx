@@ -1,9 +1,10 @@
 import Todos from "./components/Todos";
 import TodoForm from "./components/TodoForm";
-import React, { useState, createContext } from "react";
-export const TodoContext = createContext();
+import React from "react";
+import { TodoContext } from "./context";
 
-class App extends React.Component {
+
+export default class App extends React.Component { 
   constructor(props) {
     super(props);
     this.state = {
@@ -79,5 +80,3 @@ const styles = {
     fontSize: "36px",
   },
 };
-
-export default App;

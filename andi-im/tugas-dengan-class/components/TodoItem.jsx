@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
-import { TodoContext } from "../App";
-
-class TodoItem extends React.Component {
+import { TodoContext } from "../context";
+export default class TodoItem extends React.Component {
   static contextType = TodoContext;
 
   getTodoTitleStyle = () => {
@@ -54,5 +53,3 @@ const styles = {
     fontSize: "16px",
   },
 };
-
-export default TodoItem;
