@@ -1,0 +1,20 @@
+Tanggal 04-06-2024
+header
+panggil function di app.js 
+membuat state didalam function variabel pertama, variabel kedua
+untuk class component untuk membuat state harus menggunakan this.state dengan nilai count 
+set count digunakan untuk melakukan perubahan pada state
+menampilkan data dalam state
+
+membuat fungsi/ component utama
+membuat component utama dan komponen pendukung
+membuat if = 5 maka akan muncul Counter selesai  
+
+event prefault default mereka akan membatalkan proses yang berasal dari form
+
+dasar dari function komponen
+membuat suatu form jika kosong munculkan error
+
+Tanggal 05-06-2024
+menggunakan rest property menggunakan array baru
+bash click-backup.sh
