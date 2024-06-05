@@ -1,0 +1,84 @@
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.tp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tp-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.tp-button {
+  background-color: #42b549;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tp-button:hover {
+  background-color: #36a437;
+}
+
+.tp-input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tp-input::placeholder {
+  color: #bbb;
+}
+
+.tp-alert {
+  color: #d9534f;
+}
+
+.tp-count {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.tp-success {
+  color: #42b549;
+  font-weight: bold;
+}
+
+.tp-result {
+  color: #5bc0de;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .tp-container {
+    flex-direction: row;
+  }
+}
