@@ -1,0 +1,73 @@
+body {
+  background-color: #282a36;
+  color: #f8f8f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: #44475a;
+  border: 1px solid #6272a4;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #6272a4;
+  color: #f8f8f2;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #50fa7b;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #6272a4;
+  border-radius: 5px;
+  width: 100%;
+  color: #f8f8f2;
+  background-color: #44475a;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: #bd93f9;
+}
+
+.error {
+  color: #ff5555;
+}
+
+.input-result {
+  color: #50fa7b;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .app {
+    flex-direction: row;
+  }
+}
