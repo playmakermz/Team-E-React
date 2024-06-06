@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const CounterApp = () => {
@@ -109,9 +109,6 @@ const App = () => {
       setShowError(false);
       setInputValue('');
     }
-
-    // update hasil filter
-    handleSearch(filterValue, hewanList);
   }
 
   const handleInputChange = (event) => {
@@ -120,7 +117,7 @@ const App = () => {
 
   const handleFilterChange = (event) => {
     setFilterValue(event.target.value);
-    handleSearch(event.target.value, hewanList);
+    handleSearch(event.target.value);
   }
 
   const handleHewanUpdate = (hewanId, namaHewan) => {
@@ -133,9 +130,6 @@ const App = () => {
     })
 
     setHewanList(newHewanList);
-
-    // update hasil filter
-    handleSearch(filterValue, hewanList);
   }
 
   const handleHewanDelete = (hewanId) => {
@@ -145,15 +139,9 @@ const App = () => {
 
     setHewanList([...newHewanList]);
     console.log('hewan list: ', newHewanList)
-
-    // update hasil filter
-    // paksa re-render untuk mendapatkan hewanList terbaru
-    
-    handleSearch(filterValue, newHewanList);
-    
   }
 
-  const handleSearch = (namaHewan, hewanList) => {
+  const handleSearch = (namaHewan) => {
     let newFilteredHewanList;
     
     if (namaHewan === '') {
@@ -169,9 +157,14 @@ const App = () => {
   }
 
   const clearFilter = () => {
-    handleSearch('', hewanList);
+    handleSearch('');
     setFilterValue('');
   }
+
+  // Update filteredHewanList setiap hewanList berubah
+  useEffect(() => {
+    handleSearch(filterValue);
+  }, [hewanList])
 
   return(
     <>
