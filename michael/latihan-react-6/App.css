@@ -1,0 +1,98 @@
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.counter-app button {
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 50px;
+}
+
+.counter-app button:hover {
+    background-color: #0056b3;
+}
+
+.simple-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.simple-form label {
+    margin-bottom: 8px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.simple-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.simple-form .submit {
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.simple-form .submit:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 5px;
+}
+
+.hewan-list {
+    margin-top: 10px;
+}
+
+.hewan-list button {
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.hewan-list p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.hewan-list button:hover {
+    background-color: #0056b3;
+}
+
+.form-filter {
+    margin-top: 10px;
+}
