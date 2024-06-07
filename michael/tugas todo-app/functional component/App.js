@@ -1,31 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-const CounterApp = () => {
-  const [counter, setCounter] = useState(0);
-
-  const increaseCounter = () => {
-    setCounter(counter+1);
-  }
-
-  const decreaseCounter = () => {
-    setCounter(counter-1);
-  }
-
-  return (
-    <>
-      <h1>Ini Counter App</h1>
-      <h3>Count: {counter}</h3>
-      <button onClick={() => increaseCounter()}>+</button>
-      <button onClick={() => decreaseCounter()}>-</button>
-    </>
-  )
-}
-
 const HewanItem = ({ hewan, handleHewanUpdate, handleHewanDelete }) => {
-  const [isUpdating, setIsUpdating] = useState(false);
-  const [isChanged, setIsChanged] = useState(false);
-  const [showError, setShowError] = useState(false);
+  const [isUpdating, setIsUpdating] = useState(false); // jika pada mode update (true) maka tampilkan <input /> dan pengguna bisa mengetikkan perubahan nama hewan
+  const [isChanged, setIsChanged] = useState(false); // untuk tahu jika inputValue pernah diubah
+  const [showError, setShowError] = useState(false); // jika pengguna menekan tombol update dengan nilai input kosong, maka error akan true
   const [inputValue, setInputValue] = useState(''); 
 
   const handleInputChange = (event) => {
@@ -83,13 +62,15 @@ const HewanItem = ({ hewan, handleHewanUpdate, handleHewanDelete }) => {
 }
 
 const App = () => {
-  const [hewanList, setHewanList] = useState([
-      { id: crypto.randomUUID(), namaHewan: 'Kuda'},
-      { id: crypto.randomUUID(), namaHewan: 'Gajah'},
-    ]);
-  const [filteredHewanList, setFilteredHewanList] = useState(hewanList);
-  const [inputValue, setInputValue] = useState('');
-  const [filterValue, setFilterValue] = useState('');
+  const initialHewanList = [
+    { id: crypto.randomUUID(), namaHewan: 'Kuda'},
+    { id: crypto.randomUUID(), namaHewan: 'Gajah'},
+  ];
+
+  const [hewanList, setHewanList] = useState(initialHewanList);
+  const [filteredHewanList, setFilteredHewanList] = useState(initialHewanList);
+  const [inputValue, setInputValue] = useState(''); // value pada input utk menambahkan hewan
+  const [filterValue, setFilterValue] = useState('');  // value pada input utk filter hewan
   const [showError, setShowError] = useState(false);
 
   const handleSubmit = (event) => {
@@ -103,9 +84,10 @@ const App = () => {
         namaHewan: inputValue
       }
 
-      hewanList.push(hewanItem);
+      const newHewanList = [...hewanList];
+      newHewanList.push(hewanItem);
 
-      setHewanList([...hewanList]);
+      setHewanList(newHewanList);
       setShowError(false);
       setInputValue('');
     }
@@ -137,15 +119,14 @@ const App = () => {
       return hewanItem.id !== hewanId;
     })
 
-    setHewanList([...newHewanList]);
-    console.log('hewan list: ', newHewanList)
+    setHewanList(newHewanList);
   }
 
   const handleSearch = (namaHewan) => {
     let newFilteredHewanList;
     
     if (namaHewan === '') {
-      newFilteredHewanList = hewanList;
+      newFilteredHewanList = [...hewanList];
     } else {
       newFilteredHewanList = hewanList.filter((hewanItem) => {
         return hewanItem.namaHewan.toLowerCase()
@@ -153,7 +134,7 @@ const App = () => {
       })
     }
 
-    setFilteredHewanList([...newFilteredHewanList]);
+    setFilteredHewanList(newFilteredHewanList);
   }
 
   const clearFilter = () => {
@@ -166,43 +147,48 @@ const App = () => {
     handleSearch(filterValue);
   }, [hewanList])
 
-  return(
-    <>
-    <div className='container counter-app'>
-      <CounterApp  />
-    </div>
-    <div className="container">
-      <form onSubmit={(event) => handleSubmit(event)} className="simple-form">
-        <label for="input-field">Nama Hewan:</label>
-        <input type="text" onChange={(event) => handleInputChange(event)} value={inputValue} id="input-field" name="input-field" placeholder="Masukan nama hewan" />
-        {showError ? <p class="error-message">Nama Hewan Tidak Boleh Kosong!</p> : ""}
-        <button className="submit">Submit</button>
-      </form>
-      {filteredHewanList.length > 0 ? (
-        <div className="hewan-list">
-          {filteredHewanList.map((hewanItem) => {
-            return (
-              <HewanItem 
-              key={hewanItem.id} 
-              hewan={hewanItem} 
-              handleHewanUpdate={handleHewanUpdate}
-              handleHewanDelete={handleHewanDelete} />
-            )
-          })}
+  return (
+    <div className='body'>
+      <div className='main'>
+
+        <div className='container header'>
+          <h1>Todo App <br />(Functional Component)</h1>
         </div>
-      ) : (
-        <></>
-      )}
-      <div className='simple-form form-filter'>
-        <label for="search-field">Filter Hewan:</label>
-        <input type="text" onChange={(event) => handleFilterChange(event)} 
-          value={filterValue} 
-          id="search-field" placeholder="Masukan filter nama hewan" />
-        <button className="submit" 
-          onClick={() => clearFilter()}>Clear</button>
+
+        <div className="container">
+          <form onSubmit={(event) => handleSubmit(event)} className="simple-form">
+            <label for="input-field">Nama Hewan:</label>
+            <input type="text" onChange={(event) => handleInputChange(event)} value={inputValue} id="input-field" name="input-field" placeholder="Masukan nama hewan" />
+            {showError ? <p class="error-message">Nama Hewan Tidak Boleh Kosong!</p> : ""}
+            <button className="submit">Submit</button>
+          </form>
+          {filteredHewanList.length > 0 ? (
+            <div className="hewan-list">
+              {filteredHewanList.map((hewanItem) => {
+                return (
+                  <HewanItem 
+                  key={hewanItem.id} 
+                  hewan={hewanItem} 
+                  handleHewanUpdate={handleHewanUpdate}
+                  handleHewanDelete={handleHewanDelete} />
+                )
+              })}
+            </div>
+          ) : (
+            <></>
+          )}
+          <div className='simple-form form-filter'>
+            <label for="search-field">Filter Hewan:</label>
+            <input type="text" onChange={(event) => handleFilterChange(event)} 
+              value={filterValue} 
+              id="search-field" placeholder="Masukan filter nama hewan" />
+            <button className="submit" 
+              onClick={() => clearFilter()}>Clear</button>
+          </div>
+        </div>
+
       </div>
     </div>
-    </>
   )
   
 }
