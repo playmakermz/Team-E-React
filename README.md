@@ -2,8 +2,9 @@
 
 Latihan hari ini:
 
-Function compononent:
-![image](https://github.com/playmakermz/Team-E-React/assets/60807663/b7938916-dafc-4e46-aa85-4d88699f3707)
+Calculator mobile app:
+![image](https://github.com/playmakermz/Team-E-React/assets/60807663/04dcd3c6-b6d9-4589-83f3-d8a7d812b12c)
+
 
 
 
@@ -11,8 +12,7 @@ Function compononent:
 
 
 dengan aturan:
-- CRUD dan search app
 
 Note:
-[Contoh hasil jadi](./Alif-angga/05)
+[Contoh hasil jadi](./Alif-angga/expo-01)
 
