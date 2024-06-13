@@ -7,49 +7,40 @@ const NoteApp = () => {
   const [description, setDescription] = useState('');
   const [editingId, setEditingId] = useState(null);
 
-
   useEffect(() => {
-
+    const initialNotes = [
       { id: '1', title: 'Membersihkan Kamar', description: 'Merapihkan kamar, Mengepel kamar, dan lainnya' },
-      
     ];
     setNotes(initialNotes);
   }, []);
 
-
   const addNote = () => {
     if (title && description) {
       if (editingId) {
-
         const updatedNotes = notes.map(note =>
           note.id === editingId ? { ...note, title, description } : note
         );
         setNotes(updatedNotes);
         setEditingId(null);
       } else {
-
         const newNote = { id: String(notes.length + 1), title, description };
         setNotes([...notes, newNote]);
       }
-
       setTitle('');
       setDescription('');
     }
   };
-
 
   const deleteNote = id => {
     const filteredNotes = notes.filter(note => note.id !== id);
     setNotes(filteredNotes);
   };
 
-
   const editNote = (id, title, description) => {
     setEditingId(id);
     setTitle(title);
     setDescription(description);
   };
-
 
   const NoteCard = ({ item }) => (
     <View style={styles.card}>
