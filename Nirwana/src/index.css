@@ -6,9 +6,25 @@
 
 }
 
-h1 {
+.counterDisplay h1 {
   text-align: center;
+  color:orange;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
-.counterDisplay {
-  color:blueviolet;
+
+.counterDisplay h2 {
+  text-align: center;
+  color:orange;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.counterDisplay button {
+  display: block;
+  margin: auto;
+  color: black;
+  background-color: greenyellow;
+  cursor: pointer;
+  margin-bottom: 15px;
 }
