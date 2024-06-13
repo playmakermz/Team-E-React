@@ -1,18 +1,12 @@
 # Team-E-React
 
-Latihan hari ini:
+# Tugas Wajib minggu ini ( 13 juni )
 
-Calculator mobile app:
-![image](https://github.com/playmakermz/Team-E-React/assets/60807663/04dcd3c6-b6d9-4589-83f3-d8a7d812b12c)
-
-
+Todo-app:
+![Screenshot from 2024-06-12 18-46-49](https://github.com/playmakermz/Team-E-React/assets/60807663/c209a6f6-1b2d-41ef-9a37-47d63efb6dc9)
 
 
 
 
-
-dengan aturan:
-
-Note:
-[Contoh hasil jadi](./Alif-angga/expo-01)
+Contoh hasil akhir: https://snack.expo.dev/K60b-7kmLE0VEPPjfF4B4
 
