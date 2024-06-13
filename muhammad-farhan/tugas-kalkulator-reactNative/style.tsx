@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     width: '30%',
     marginVertical: 10,
     paddingVertical: 20,
-    backgroundColor: '#ccc', // Abu-abu
+    backgroundColor: '#ccc', 
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     width: '30%',
     marginVertical: 10,
     paddingVertical: 20,
-    backgroundColor: '#ccc', // Abu-abu
+    backgroundColor: '#ccc', 
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     width: '30%',
     marginVertical: 10,
     paddingVertical: 20,
-    backgroundColor: '#ccc', // Abu-abu
+    backgroundColor: '#ccc', 
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     width: '100%',
     marginVertical: 10,
     paddingVertical: 20,
-    backgroundColor: '#ccc', // Abu-abu
+    backgroundColor: '#ccc', 
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
