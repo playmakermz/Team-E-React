@@ -28,3 +28,18 @@
   cursor: pointer;
   margin-bottom: 15px;
 }
+
+.header h1{
+  color:brown;
+  padding-bottom: 20px;
+}
+
+.footer h1{
+  color:brown;
+  padding-top: 20px;
+}
+
+.buttonTugas{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
