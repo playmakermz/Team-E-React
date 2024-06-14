@@ -55,6 +55,16 @@ class App extends React.Component {
     this.setState({ todos: updatedTodos });
   }
 
+  updateTodo = (todoId, newTitle) => {
+    const updatedTodos = this.state.todos.map((todo) => {
+      if (todo.id === todoId) {
+        todo.title = newTitle;
+      }
+      return todo;
+    });
+    this.setState({ todos: updatedTodos });
+  }
+
   render() {
     return (
       <div style={listStyle.container}>
@@ -64,6 +74,7 @@ class App extends React.Component {
           todos={this.state.todos}
           toggleCompleted={this.toggleCompleted}
           deleteTodo={this.deleteTodo}
+          updateTodo={this.updateTodo}
         />
       </div>
     );

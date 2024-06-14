@@ -3,7 +3,7 @@ import TodoItem from './TodoItem';
 
 class Todos extends React.Component {
   render() {
-    const { todos, toggleCompleted, deleteTodo } = this.props;
+    const { todos, toggleCompleted, deleteTodo, updateTodo } = this.props;
     return (
       <div style={listStyle.container}>
         {todos.map((todo) => {
@@ -13,6 +13,7 @@ class Todos extends React.Component {
               todo={todo}
               toggleCompleted={toggleCompleted}
               deleteTodo={deleteTodo}
+              updateTodo={updateTodo}
             />
           );
         })}

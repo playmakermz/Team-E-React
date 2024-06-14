@@ -1,10 +1,10 @@
-import React, {useState, createContext} from 'react';
+import React, { useState, createContext } from 'react';
 import Todos from './Todos';
 import TodoForm from './TodoForm';
 
 export const TodoContext = createContext();
 
-function App() {
+const App = () => {
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -21,19 +21,15 @@ function App() {
       title: "Study React with Ninja Ken",
       completed: false
     }
-  ])
-
-  //console.log(todos);
+  ]);
 
   const toggleCompleted = (todoId) => {
     const updatedTodos = todos.map((todo) => {
       if (todo.id === todoId) {
         todo.completed = !todo.completed;
       }
-      //kembaliin todo yang completed === true
       return todo;
-    })
-    //di-set deh sama todo yg datanya udah diperbarui
+    });
     setTodos(updatedTodos);
   }
 
@@ -50,21 +46,28 @@ function App() {
       id: todos.length + 1,
       title: todoTitle,
       completed: false,
-    }
+    };
 
     const updatedTodos = todos.concat(newTodo);
     setTodos(updatedTodos);
+  }
 
+  const updateTodo = (todoId, newTitle) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === todoId) {
+        todo.title = newTitle;
+      }
+      return todo;
+    });
+    setTodos(updatedTodos);
   }
 
   return (
-    <TodoContext.Provider value={{toggleCompleted, deleteTodo}}>
+    <TodoContext.Provider value={{ toggleCompleted, deleteTodo, updateTodo }}>
       <div style={listStyle.container}>
         <h1 style={listStyle.title}>My Todo List</h1>
-        <TodoForm addTodo={addTodo}/>
-        <Todos 
-        todos={todos} 
-        />
+        <TodoForm addTodo={addTodo} />
+        <Todos todos={todos} />
       </div>
     </TodoContext.Provider>
   );
