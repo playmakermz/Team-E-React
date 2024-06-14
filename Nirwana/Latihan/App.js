@@ -40,28 +40,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-/*constructor(props){
-  super(props);
-  this.state = {name : "Lihat deskripsi"};
-}
-
-
-render() {
-  let listBuah = [
-    {name : "Apple", id : 1},
-    {name : "Mango", id : 2},
-    {name : "Avocado", id : 3},
-    {name : "Watermelon", id : 4},
-    {name : "Papaya", id : 5}
-  ]
-  return(
-    <div>
-      {listBuah.map((item) => {
-        return (
-          <p>{item.name}</p>
-        )
-      })}
-    </div>
-  )
-}*/
