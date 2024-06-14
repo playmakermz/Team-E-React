@@ -1,4 +1,9 @@
-const TodoItem = ({todo, toggleCompleted, deleteTodo}) => {
+import React, {useContext} from "react";
+import { TodoContext } from "./App";
+
+const TodoItem = ({todo}) => {
+    const {toggleCompleted, deleteTodo} = useContext(TodoContext);
+    
     //function untuk mencoret todoItem jika statusnya completed (===true)
     const getTodoTitleStyle = () => {
         if (todo.completed === true) {
