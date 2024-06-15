@@ -1,0 +1,105 @@
+import { StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+    backgroundColor: '#ffffff',
+  },
+  containerSibling: {
+    width: '90%',
+    borderRadius: 15, 
+    padding: 20,
+    backgroundColor: '#ffffff',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1, 
+    shadowRadius: 5,
+    elevation: 3,
+  },
+  h1: {
+    fontSize: 28, 
+    fontWeight: '600',
+    marginBottom: 20,
+    textAlign: 'center',
+    color: '#333',
+  },
+  input: {
+    height: 50,
+    borderColor: '#e0e0e0', 
+    borderWidth: 1,
+    borderRadius: 10, 
+    marginBottom: 15,
+    paddingHorizontal: 15, 
+    fontSize: 16,
+    backgroundColor: '#f9f9f9', 
+  },
+  submitButton: {
+    backgroundColor: '#34a853', 
+    padding: 15,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginBottom: 20,
+    width: '100%', 
+  },
+  updateButton: {
+    backgroundColor: '#fbbc05', 
+    padding: 15,
+    borderRadius: 10, 
+    alignItems: 'center',
+    marginBottom: 20,
+    width: '100%', 
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 18, 
+    fontWeight: 'bold',
+  },
+  itemList: {
+    paddingVertical: 20,
+  },
+  item: {
+    padding: 20, 
+    borderRadius: 10, 
+    backgroundColor: '#f0ebeb', 
+    marginBottom: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.05, 
+    shadowRadius: 3,
+    elevation: 2,
+  },
+  itemTitle: {
+    fontSize: 20, 
+    fontWeight: '600',
+    marginBottom: 5,
+  },
+  itemDescription: {
+    fontSize: 16,
+    color: '#666', 
+    flex: 1, 
+  },
+  buttonContainer: {
+    flexDirection: 'row', 
+    justifyContent: 'flex-end', 
+  },
+  deleteButton: {
+    backgroundColor: '#e74c3c', 
+    borderRadius: 10,
+    padding: 10,
+    alignItems: 'center',
+    marginVertical: 5,
+    marginLeft: 10, 
+  },
+  updateItemButton: {
+    backgroundColor: '#ffa500', 
+    borderRadius: 10,
+    padding: 10,
+    alignItems: 'center',
+    marginVertical: 5,
+  },
+});
+
+export { styles };
