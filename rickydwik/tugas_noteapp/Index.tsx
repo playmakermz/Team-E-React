@@ -1,6 +1,8 @@
 import { TouchableOpacity, View, ScrollView, Text, Button, TextInput, SafeAreaView } from "react-native";
 import { useState } from "react";
 import { StyleSheet } from "react-native";
+import * as crypto from "expo-crypto";
+
 
 export default function App() {
   let [formTitle, setFormTitle] = useState('') // ============= State untuk title form ==========
@@ -53,7 +55,7 @@ export default function App() {
 
   return(
     <SafeAreaView style={styles.container}>
-      <View style={styles.containerSibling}>
+      <ScrollView style={styles.containerSibling}>
         <Text style={styles.h1}>Aplikasi Note</Text>
 
         <TextInput
@@ -82,7 +84,7 @@ export default function App() {
 
     }
 
-      <ScrollView contentContainerStyle={styles.itemList}>
+      <View contentContainerStyle={styles.itemList}>
         {formInput.map((item) => (
 
           <View key={item.id} style={styles.itemm}>
@@ -96,17 +98,17 @@ export default function App() {
           </View>
 
         ))}
-      </ScrollView>
-
       </View>
+
+      </ScrollView>
     </SafeAreaView>
   )
-}
+};
 
 
 const styles = StyleSheet.create({
   input: {
-    width: "99%",
+    maxWidth:"100%",
     borderWidth: 1,
     borderColor: "black",
     borderRadius: 5,
@@ -137,7 +139,6 @@ const styles = StyleSheet.create({
 
   h1: {
     fontSize: 24,
-    fontFamily:"Arial",
     fontWeight: "bold",
     textAlign: "center",
     marginVertical: 20,
