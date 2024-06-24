@@ -1,0 +1,14 @@
+[
+  {
+    "city": "Jakarta",
+    "temperature": 30,
+    "condition": "Sunny",
+    "date": "2024-06-23T12:00:00Z"
+  },
+  {
+    "city": "Bandung",
+    "temperature": 22,
+    "condition": "Cloudy",
+    "date": "2024-06-23T12:00:00Z"
+  }
+]
