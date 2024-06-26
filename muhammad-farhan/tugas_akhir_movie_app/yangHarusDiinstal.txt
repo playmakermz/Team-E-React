@@ -1,0 +1,21 @@
+1. Install Node.js dan npm: Pastikan Anda telah menginstal Node.js dan npm (Node Package Manager) di sistem Anda. Anda dapat mengunduhnya dari situs resmi Node.js. Install
+Paket Uyang Dibutuhkan
+
+2. Install Expo CLI: Expo CLI adalah alat yang memudahkan pembuatan dan pengelolaan proyek React Native.
+    npm install -g expo-cli
+
+
+3. Instalasi Paket-paket yang Dibutuhkan:
+    1. npm install @react-navigation/native @react-navigation/bottom-tabs @react-navigation/stack
+    2. npm install react-native-screens react-native-safe-area-context
+    3. npm install axios
+    4. npm install @react-native-async-storage/async-storage
+    5. npm install react-native-vector-icons
+    6. npm install @expo/vector-icons
+
+4. Linking Vector Icons: Expo biasanya sudah mendukung react-native-vector-icons tanpa perlu melakukan link manual. Namun, jika Anda menggunakan React Native CLI, Anda mungkin perlu menjalankan:
+    npx react-native link react-native-vector-icons
+
+5. Menjalankan Proyek:
+    expo start
+
