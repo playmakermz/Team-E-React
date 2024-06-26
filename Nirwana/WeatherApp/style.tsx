@@ -2,21 +2,23 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
+    padding: 20,
   },
   inputContainer: {
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    width: '80%',
+    alignItems: 'center',
     marginBottom: 20,
   },
   input: {
     borderWidth: 2,
     borderColor: '#DDDDDD',
     padding: 10,
-    flex: 1,
-    marginRight: 10,
+    width: '50%',
+    marginBottom: 10,
+    textAlign: 'center',
   },
   weatherContainer: {
     width: '100%',
@@ -36,6 +38,10 @@ export const styles = StyleSheet.create({
   temperature: {
     fontSize: 80,
     fontWeight: '700',
+  },
+  city:{
+    fontSize:100,
+    fontWeight: '800',
   },
   description: {
     fontSize: 20,
@@ -73,5 +79,33 @@ export const styles = StyleSheet.create({
   },
   forecastTemp: {
     fontSize: 18,
+  },
+  logItem: {
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
+    backgroundColor: 'white',
+    marginVertical: 5,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  logText: {
+    color: '#000',
+  },
+  deleteButton: {
+    backgroundColor: 'red',
+    marginTop: 20,
+  },
+  button: {
+    backgroundColor: '#1E90FF',
+    padding: 10,
+    marginTop: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+    width: '50%',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
   },
 });
