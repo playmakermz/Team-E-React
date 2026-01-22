@@ -15,7 +15,7 @@ import {
 
 // API constants
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
-const API_KEY = "7d3509ab4fead0c05ecd4850c63ecc0c";
+const API_KEY = "";
 
 // CustomTextInput
 const CustomTextInput = ({
